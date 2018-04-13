@@ -34,6 +34,7 @@ life_tags = count _units;
 {
 	private["_text"];
 	_idc = _ui displayCtrl (iconID + _forEachIndex);
+	_onDuty = _x getVariable ["onDuty",0];
 	if(!(lineIntersects [eyePos player, eyePos _x, player, _x]) && {!isNil {_x getVariable "realname"}}) then {
 		_pos = switch(typeOf _x) do {
 			case "Land_Pallet_MilBoxes_F": {[visiblePosition _x select 0, visiblePosition _x select 1, (getPosATL _x select 2) + 1.5]};
@@ -43,6 +44,7 @@ life_tags = count _units;
 		if(count _sPos > 1 && {_pos distance player < 10 || (life_targetTag && cursorTarget == _x && _pos distance player < 250)}) then {
 			_text = switch (true) do {
 				case (!(player getVariable["invis",false] || playerSide == independent) && ((headgear _x) in _headgear || (goggles _x) in _goggles) && !(_x in (units group player)) && !(side _x == west) && !(player getVariable["unconscious",false]) && !(_x getVariable["invis",false])): {format["<t color='#000000'>Masked Man</t>"];};
+				case (isPlayer _x && _onDuty == 1): {format["%1<br/><t size='0.8' color='#FF0000'>Staff on Duty</t>",(_x getVariable ["realname",name _x])];};
 				case (_x in (units group player) && playerSide == civilian && !(_x getVariable["invis",false])): {format["<t color='#00FF00'>%1</t>",(_x getVariable ["realname",name _x])];};
 				case (_x getVariable["unconscious",false] && !(_x getVariable["invis",false])): {format["<t color='#FF0000'>%1 [Unconscious]</t>",(_x getVariable ["realname",name _x])];};
 				case (_x getVariable["invis",false]): {""};
