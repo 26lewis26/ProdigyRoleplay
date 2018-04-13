@@ -1,6 +1,7 @@
 /*
 	File: fn_adminOnOffDuty.sqf
-	Author: Josh L & IEthanHD
+	Author: IEthanHD
+	Adapted From ALRPG: JoshL
 */
 
 //--- Include Shitty Macros
