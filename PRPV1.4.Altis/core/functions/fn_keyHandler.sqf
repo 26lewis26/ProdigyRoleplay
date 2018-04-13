@@ -143,6 +143,13 @@ switch (_code) do
 		};
 	};
 	
+	 //Shift + 0 - On/Off Duty
+    case 11: {
+        if(_shift) then {
+            [] spawn life_fnc_adminOnOffDuty;
+        };
+    };
+	
 	/*Holster / recall weapon.*/
 	case 35:
 	{
