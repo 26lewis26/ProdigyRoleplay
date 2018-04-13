@@ -129,6 +129,7 @@ STS_actions = [];
 life_smartphoneTarget = ObjNull;
 life_reviving = false;
 life_marked = false;
+admin_onDuty = 0;
 
 /*Revive constant variables.*/
 __CONST__(life_revive_fee,1250);
