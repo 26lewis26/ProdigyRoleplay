@@ -17,7 +17,7 @@ _int = 0;
 {
     if(side _x == west) then {_int = _int + (_x getVariable["rank",0])};
 } forEach playableUnits;
-if(playersNumber west < 1 || _int < 1) exitWith {hint "There are not enough police online to complete this action!"; };
+if(playersNumber west < 1 || _int < 4) exitWith {hint "There are not enough police online to complete this action!"; };
 if(!([false,"blastingcharge",1] call life_fnc_handleInv)) exitWith {}; /*Error?*/
 
 /*Begin bank robbery*/

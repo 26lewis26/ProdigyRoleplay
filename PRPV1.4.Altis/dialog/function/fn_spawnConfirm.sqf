@@ -6,7 +6,7 @@
 	Spawns the player where he selected.
 */
 private["_spCfg","_sp","_spawnPos","_handle"];
-if(life_lastKnownPos distance (getMarkerPos (life_spawn_point select 0)) < 1000) exitWith {systemChat "You cannot spawn there, as it is too close to the scene of your death. Choose another spawn."; };
+if(life_lastKnownPos distance (getMarkerPos (life_spawn_point select 0)) < 1) exitWith {systemChat "You cannot spawn there, as it is too close to the scene of your death. Choose another spawn."; };
 
 closeDialog 0;
 cutText ["","BLACK IN"];

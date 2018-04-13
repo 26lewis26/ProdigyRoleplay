@@ -2,10 +2,10 @@
 /*
 	File: fn_weaponShopCfg.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master configuration file for the weapon shops.
-	
+
 	params: classname, custom name
 	prices now determined in DB
 */
@@ -52,7 +52,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"You are not a cop!"};
-			
+
 			case (__GETC__(style) > 0):
 			{
 				["Admin Shop",
@@ -136,7 +136,7 @@ switch(_shop) do
 					]
 				];
 			};
-	
+
 			case (__GETC__(life_coplevel) == 0):
 			{
 				["Public Cop Shop",
@@ -150,7 +150,7 @@ switch(_shop) do
 						["arifle_SDAR_F","Stun Rifle"],
 						["20Rnd_556x45_UW_mag","SDAR Taser Rounds"],
 						["optic_Aco_smg",nil],
-						["optic_ACO_grn_smg",nil],				
+						["optic_ACO_grn_smg",nil],
 						["optic_Holosight_smg",nil],
 						["Rangefinder",nil]
 					]
@@ -175,10 +175,10 @@ switch(_shop) do
 					]
 				];
 			};
-			
+
 			case (__GETC__(life_coplevel) == 2):
 			{
-				_return = ["PC Shop",
+				["PC Shop",
 					[
 						["hgun_P07_snds_F","Taser Pistol"],
 						["hgun_Rook40_snds_F","Stun Pistol"],
@@ -195,13 +195,13 @@ switch(_shop) do
 						["optic_ACO_grn_smg",nil],
 						["optic_Holosight_smg",nil],
 						["Rangefinder",nil]
-						
+
 					]
 				];
-			};	
+			};
 			case (__GETC__(life_coplevel) == 3):
 			{
-				_return = ["SPC Shop",
+					["SPC Shop",
 					[
 						["hgun_P07_snds_F","Taser Pistol"],
 						["hgun_Rook40_snds_F","Stun Pistol"],
@@ -223,7 +223,7 @@ switch(_shop) do
 						["optic_ACO_grn_smg",nil],
 						["optic_Holosight_smg",nil],
 						["Rangefinder",nil]
-						
+
 					]
 				];
 			};
@@ -244,15 +244,15 @@ switch(_shop) do
 						["30Rnd_556x45_Stanag",nil],
 						["arifle_MXC_Black_F",nil],
 						["arifle_MX_Black_F",nil],
-						["arifle_MXM_Black_F",nil],	
-						["30Rnd_65x39_caseless_mag",nil],						
+						["arifle_MXM_Black_F",nil],
+						["30Rnd_65x39_caseless_mag",nil],
 						["optic_Hamr",nil],
 						["optic_Arco",nil],
 						["optic_MRCO",nil],
 						["optic_Aco_smg",nil],
 						["optic_ACO_grn_smg",nil],
 						["optic_Holosight_smg",nil],
-						["optic_DMS",nil],						
+						["optic_DMS",nil],
 						["Rangefinder",nil]
 					]
 				];
@@ -274,12 +274,12 @@ switch(_shop) do
 						["30Rnd_556x45_Stanag",nil],
 						["arifle_MXC_Black_F",nil],
 						["arifle_MX_Black_F",nil],
-						["arifle_MXM_Black_F",nil],	
+						["arifle_MXM_Black_F",nil],
 						["30Rnd_65x39_caseless_mag",nil],
-						["arifle_SPAR_02_blk_F",nil],	
-						["150Rnd_556x45_Drum_Mag_F",nil],						
+						["arifle_SPAR_02_blk_F",nil],
+						["150Rnd_556x45_Drum_Mag_F",nil],
 						["optic_Hamr",nil],
-						["optic_DMS",nil],						
+						["optic_DMS",nil],
 						["optic_Arco",nil],
 						["optic_MRCO",nil],
 						["optic_Aco_smg",nil],
@@ -305,12 +305,12 @@ switch(_shop) do
 						["30Rnd_556x45_Stanag",nil],
 						["arifle_MXC_Black_F",nil],
 						["arifle_MX_Black_F",nil],
-						["arifle_MXM_Black_F",nil],	
+						["arifle_MXM_Black_F",nil],
 						["30Rnd_65x39_caseless_mag",nil],
-						["arifle_SPAR_02_blk_F",nil],	
-						["150Rnd_556x45_Drum_Mag_F",nil],						
+						["arifle_SPAR_02_blk_F",nil],
+						["150Rnd_556x45_Drum_Mag_F",nil],
 						["optic_Hamr",nil],
-						["optic_DMS",nil],						
+						["optic_DMS",nil],
 						["optic_Arco",nil],
 						["optic_MRCO",nil],
 						["optic_Aco_smg",nil],
@@ -320,7 +320,7 @@ switch(_shop) do
 					]
 				];
 			};
-			
+
 			case (__GETC__(life_coplevel) == 7):
 			{
 				_return = ["C/INSP Shop",
@@ -337,24 +337,24 @@ switch(_shop) do
 						["30Rnd_556x45_Stanag",nil],
 						["arifle_MXC_Black_F",nil],
 						["arifle_MX_Black_F",nil],
-						["arifle_MXM_Black_F",nil],	
+						["arifle_MXM_Black_F",nil],
 						["30Rnd_65x39_caseless_mag",nil],
-						["arifle_SPAR_02_blk_F",nil],	
-						["150Rnd_556x45_Drum_Mag_F",nil],						
+						["arifle_SPAR_02_blk_F",nil],
+						["150Rnd_556x45_Drum_Mag_F",nil],
 						["optic_Hamr",nil],
 						["optic_LRPS",nil],
-						["optic_SOS",nil],						
-						["optic_DMS",nil],						
+						["optic_SOS",nil],
+						["optic_DMS",nil],
 						["optic_Arco",nil],
 						["optic_MRCO",nil],
 						["optic_Aco_smg",nil],
 						["optic_ACO_grn_smg",nil],
 						["optic_Holosight_smg",nil],
 						["Rangefinder",nil]
-						
+
 					]
 				];
-			};	
+			};
 			case (__GETC__(life_coplevel) == 8):
 			{
 				_return = ["SUPT Shop",
@@ -371,23 +371,23 @@ switch(_shop) do
 						["30Rnd_556x45_Stanag",nil],
 						["arifle_MXC_Black_F",nil],
 						["arifle_MX_Black_F",nil],
-						["arifle_MXM_Black_F",nil],	
+						["arifle_MXM_Black_F",nil],
 						["30Rnd_65x39_caseless_mag",nil],
-						["arifle_SPAR_02_blk_F",nil],	
-						["150Rnd_556x45_Drum_Mag_F",nil],	
-						["srifle_DMR_03_F",nil],	
-						["20Rnd_762x51_Mag",nil],						
+						["arifle_SPAR_02_blk_F",nil],
+						["150Rnd_556x45_Drum_Mag_F",nil],
+						["srifle_DMR_03_F",nil],
+						["20Rnd_762x51_Mag",nil],
 						["optic_Hamr",nil],
 						["optic_LRPS",nil],
-						["optic_SOS",nil],						
-						["optic_DMS",nil],						
+						["optic_SOS",nil],
+						["optic_DMS",nil],
 						["optic_Arco",nil],
 						["optic_MRCO",nil],
 						["optic_Aco_smg",nil],
 						["optic_ACO_grn_smg",nil],
 						["optic_Holosight_smg",nil],
 						["Rangefinder",nil]
-						
+
 					]
 				];
 			};
@@ -408,17 +408,17 @@ switch(_shop) do
 						["30Rnd_556x45_Stanag",nil],
 						["arifle_MXC_Black_F",nil],
 						["arifle_MX_Black_F",nil],
-						["arifle_MXM_Black_F",nil],	
+						["arifle_MXM_Black_F",nil],
 						["30Rnd_65x39_caseless_mag",nil],
-						["arifle_SPAR_02_blk_F",nil],	
-						["150Rnd_556x45_Drum_Mag_F",nil],	
-						["srifle_DMR_03_F",nil],	
-						["arifle_SPAR_03_blk_F",nil],	
-						["20Rnd_762x51_Mag",nil],						
+						["arifle_SPAR_02_blk_F",nil],
+						["150Rnd_556x45_Drum_Mag_F",nil],
+						["srifle_DMR_03_F",nil],
+						["arifle_SPAR_03_blk_F",nil],
+						["20Rnd_762x51_Mag",nil],
 						["optic_Hamr",nil],
 						["optic_LRPS",nil],
-						["optic_SOS",nil],						
-						["optic_DMS",nil],						
+						["optic_SOS",nil],
+						["optic_DMS",nil],
 						["optic_Arco",nil],
 						["optic_MRCO",nil],
 						["optic_Aco_smg",nil],
@@ -445,17 +445,17 @@ switch(_shop) do
 						["30Rnd_556x45_Stanag",nil],
 						["arifle_MXC_Black_F",nil],
 						["arifle_MX_Black_F",nil],
-						["arifle_MXM_Black_F",nil],	
+						["arifle_MXM_Black_F",nil],
 						["30Rnd_65x39_caseless_mag",nil],
-						["arifle_SPAR_02_blk_F",nil],	
-						["150Rnd_556x45_Drum_Mag_F",nil],		
-						["srifle_DMR_03_F",nil],	
-						["arifle_SPAR_03_blk_F",nil],	
-						["20Rnd_762x51_Mag",nil],						
+						["arifle_SPAR_02_blk_F",nil],
+						["150Rnd_556x45_Drum_Mag_F",nil],
+						["srifle_DMR_03_F",nil],
+						["arifle_SPAR_03_blk_F",nil],
+						["20Rnd_762x51_Mag",nil],
 						["optic_Hamr",nil],
 						["optic_LRPS",nil],
-						["optic_SOS",nil],						
-						["optic_DMS",nil],						
+						["optic_SOS",nil],
+						["optic_DMS",nil],
 						["optic_Arco",nil],
 						["optic_MRCO",nil],
 						["optic_Aco_smg",nil],
@@ -464,7 +464,7 @@ switch(_shop) do
 						["Rangefinder",nil]
 					]
 				];
-			};	
+			};
 			case (playerSide != west): {"You are not a COP!"};
 			case (!license_cop_swat): {"You don't have a SCO license!"};
 			{
@@ -482,18 +482,18 @@ switch(_shop) do
 						["30Rnd_556x45_Stanag",nil],
 						["arifle_MXC_Black_F",nil],
 						["30Rnd_65x39_caseless_mag",nil],
-						["arifle_MX_SW_Black_F",nil],	
+						["arifle_MX_SW_Black_F",nil],
 						["100Rnd_65x39_caseless_mag",nil],
-						["arifle_MXM_Black_F",nil],	
-						["30Rnd_65x39_caseless_mag",nil],	
-						["SMG_01_F",nil],		
-						["30Rnd_45ACP_Mag_SMG_01",nil],	
-						["srifle_DMR_02_camo_F",nil],	
-						["10Rnd_338_Mag",nil],						
+						["arifle_MXM_Black_F",nil],
+						["30Rnd_65x39_caseless_mag",nil],
+						["SMG_01_F",nil],
+						["30Rnd_45ACP_Mag_SMG_01",nil],
+						["srifle_DMR_02_camo_F",nil],
+						["10Rnd_338_Mag",nil],
 						["srifle_DMR_03_F",nil],
 						["20Rnd_762x51_Mag",nil],
-						["srifle_DMR_04_F",nil],						
-						["10Rnd_127x54_Mag",nil],						
+						["srifle_DMR_04_F",nil],
+						["10Rnd_127x54_Mag",nil],
 						["srifle_DMR_06_camo_F",nil],
 						["20Rnd_762x51_Mag",nil],
 						["arifle_CTARS_blk_F",nil],
@@ -521,13 +521,13 @@ switch(_shop) do
 						["Rangefinder",nil]
 					]
 				];
-			};			
+			};
 		};
 	};
-	
+
 	case "medic":
 	{
-		switch (true) do 
+		switch (true) do
 		{
 			case (playerSide != independent): {"You are not an AMS Medic"};
 			case (__GETC__(life_medicLevel) > 1):
@@ -573,7 +573,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "rebel":
 	{
 		switch(true) do
@@ -636,7 +636,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "gun":
 	{
 		switch(true) do
@@ -667,7 +667,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "gang":
 	{
 		switch(true) do
@@ -696,7 +696,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "c3":
 	{
 		switch(true) do
@@ -740,7 +740,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "genstore":
 	{
 		["Altis General Store",
@@ -762,7 +762,7 @@ switch(_shop) do
 			]
 		];
 	};
-	
+
 	case "bh":
 	{
 		["Bounty Hunter Shop",
@@ -807,7 +807,7 @@ switch(_shop) do
 			]
 		];
 	};
-	
+
 	case "ammo":
 	{
 		["Munition stock",
@@ -833,7 +833,7 @@ switch(_shop) do
 			]
 		];
 	};
-	
+
 	case "under":
 	{
 		["Undercover",
@@ -866,8 +866,8 @@ switch(_shop) do
 				["30Rnd_45ACP_Mag_SMG_01",nil],
 				["30Rnd_45ACP_Mag_SMG_01_Tracer_Green",nil],
 				["arifle_TRG20_F",nil],
-				["arifle_TRG21_F",nil],	
-				["arifle_Mk20C_F",nil],	
+				["arifle_TRG21_F",nil],
+				["arifle_Mk20C_F",nil],
 				["arifle_Mk20_F",nil],
 				["30Rnd_556x45_Stanag",nil],
 				["30Rnd_556x45_Stanag_Tracer_Red",nil],

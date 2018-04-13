@@ -43,6 +43,7 @@ else
 ["CALL deleteOldMessages",1] spawn DB_fnc_asyncCall;
 ["CALL deleteOldOffers",1] spawn DB_fnc_asyncCall;
 ["CALL deleteDeadTents",1] spawn DB_fnc_asyncCall;
+["CALL DeactivateVehicles",1] spawn DB_fnc_asyncCall;
 };
 style = {0};
 life_medicLevel = {0};
@@ -114,3 +115,16 @@ fnc_queryBank = {
 	_bank = ([_query,2] call DB_fnc_asyncCall) select 0;
 	["life_myFunds",_bank] remoteExecCall ["life_fnc_netSetVar",_this];
 };
+
+_fedLoc = [16657.2,13575.9,2.55031];
+
+_dome = nearestObject [_fedLoc,"Land_Dome_Big_F"];
+_vaultBuilding = nearestObject [_fedLoc,"Land_Research_HQ_F"];
+
+for "_i" from 1 to 3 do {_dome setVariable [format ["bis_disabled_Door_%1",_i],1,true]; _dome animateSource [format ["Door_%1_source", _i], 0];};
+_vaultBuilding setVariable ["locked",true,true];
+_vaultBuilding setVariable ["bis_disabled_Door_1",1,true];
+_vaultBuilding allowDamage false;
+_dome setVariable ["locked",true,true];
+_dome setVariable ["bis_disabled_Door_1",1,true];
+_dome allowDamage false;

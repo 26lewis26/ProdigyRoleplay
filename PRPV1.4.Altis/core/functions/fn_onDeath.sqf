@@ -42,10 +42,10 @@ cutText[format["Cloning %1, please stand by...",profileName],"BLACK FADED"];
 		};
 	};
 
-if(playerSide == civilian && player getVariable["shotByCop",false]) then
+if(playerSide == civilian) then
 {
 	[getPlayerUID player] remoteExec ["life_fnc_wantedRemove",2];
-	license_civ_rebel = false;
+	license_civ_rebel = true;
 	license_civ_c3 = false;
 	life_wanted = false;
 	player setVariable["shotByCop",nil,true];
