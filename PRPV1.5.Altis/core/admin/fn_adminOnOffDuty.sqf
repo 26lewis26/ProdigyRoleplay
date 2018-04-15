@@ -16,7 +16,7 @@ _suit = [
 _random = selectRandom _suit;
 
 //--- Check Player Is Admin
-if(__GETC__(life_adminlevel) < 2) exitWith {closeDialog 0; hint "You do not have acccess to this";};
+if(__GETC__(style) < 2) exitWith {closeDialog 0; hint "You do not have acccess to this";};
 
 if(admin_onDuty == 1) then {
 	
